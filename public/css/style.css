@@ -1,0 +1,143 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x:hidden ;
+}
+.container{
+    flex: 1;
+}
+.navbar{
+    background-color: white;
+    height: 5rem; 
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color:#222222 !important;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+    margin-right: 0.5rem;
+    
+}
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.f-info-links,.f-info-socials,.f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #ebebeb;
+    height: 8rem;
+}
+
+/* Cards */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem ;
+}
+
+.card-img{
+    border-radius: 1.5rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+.card-text p{
+    font-weight: 400 !important;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+/* Card overlay */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* New page */
+.add-btn{
+    background-color: #fe424d;
+    border: none;
+}
+
+/* Edit page */
+.edit-btn{
+    background-color: #fe424d;
+    border: none;
+    margin-right: 1rem;
+}
+
+.form-label{
+    font-weight: 600;
+}
+.show-img{
+    object-fit: fill;
+    height: 40vh;
+    width: 100%;
+}
+
+.btns{
+    display: flex;
+}
+
+
+/* MAP */
+#map{
+    height: 400px;
+    width: 100%;
+}
+
+
+/* Navlinks psuedo classes */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit; /* keeps Bootstrap theme color */
+  padding: 0.5rem 1rem;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;               /* start from the middle */
+  bottom: 0;
+  width: 0;
+  height: 2px;             /* thickness of underline */
+  background-color: currentColor;
+  transition: all 0.3s ease; /* smooth animation */
+  transform: translateX(-50%); /* keep it centered */
+}
+
+.nav-link:hover::after {
+  width: 100%;             /* expand to full width */
+}
