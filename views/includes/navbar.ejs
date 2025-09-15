@@ -1,54 +1,104 @@
 <style>
-    .btn-search{
-      background-color: #fe424d;
-      color: white;
-      border-radius: 25px;
-      padding: 0 1rem 0 1rem;
-    }
-    .btn-search:hover{
-      background-color: #fe424d;
-      color: white;
-    }
-    .btn-search i {
-      display: inline;
-      margin-right: 0.5rem;
-    }
-    .search-inp{
-      border-radius: 25px;
-      padding: 0.5rem 3rem 0.5rem 3rem;
-    }
-    
+  .btn-search {
+    background-color: #fe424d;
+    color: white;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+  }
+  .btn-search-mb {
+    background-color: #fe424d;
+    color: white;
+    border-radius:30px;
+    padding: 0.3rem 1rem 0.3rem 1rem ;
+    border: 0.1px;
+  }
+  .btn-search:hover {
+    background-color: #fe424d;
+    color: white;
+  }
+  .btn-search-mb:hover {
+    background-color: #fe424d;
+    color: white;
+  }
+  .btn-search i {
+    display: inline;
+    margin-right: 0.5rem;
+  }
+  .search-inp {
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+  }
+  .search-inp-mb {
+    width: 10rem;
+    /* border: 0.1px solid; */
+    border-radius: 25px;
+    padding: 0 0 0 0.5rem ;
+    box-shadow: 0.1px 0.1px 5px;
+  }
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light sticky-top border-bottom">
   <div class="container-fluid">
     <div class="navbar-logo">
-      <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+      <a class="navbar-brand" href="/listings"
+        ><i class="fa-regular fa-compass"></i
+      ></a>
     </div>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" >
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
+
+        <!-- Search for mobile layout -->
+        <%if(currUser){%>
+        <div class="navbar-nav-md d-md-none ms-3 me-auto">
+          <form class="d-flex" action="/listings" role="search">
+            <input
+              class="form-control me-2 search-inp-mb"
+              name="search"
+              type="search"
+              placeholder="Search"
+            />
+            <button class="btn btn-search-mb" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        <%}%>
+
         <a class="nav-link" href="/listings">Explore</a>
-        <a class="nav-link" href="/listings/new">Host Your Place</a>
       </div>
 
+      <!-- Search for wide screens -->
       <%if(currUser){%>
-      <div class="navbar-nav ms-auto">
+      <div class="navbar-nav-md d-none d-md-flex ms-auto">
         <form class="d-flex" action="/listings" role="search">
-          <input class="form-control me-2 search-inp" name="search" type="search" placeholder="Search Destinations"/>
-          <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+          <input
+            class="form-control me-2 search-inp"
+            name="search"
+            type="search"
+            placeholder="Search Destinations"
+          />
+          <button class="btn btn-search" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>Search
+          </button>
         </form>
       </div>
-    <%}%>
+      <%}%>
       <div class="navbar-nav ms-auto">
         <% if (!currUser) { %>
-        <a class="nav-link"  href="/signup"><b>Sign Up</b></a>
+        <a class="nav-link" href="/signup"><b>Sign Up</b></a>
         <a class="nav-link" href="/login"><b>Log In</b></a>
-        <% } %>
-        <% if (currUser) { %>
+        <% } %> <% if (currUser) { %>
+        <a class="nav-link" href="/listings/new">Host Your Place</a>
         <a class="nav-link" href="/logout"><b>Log out</b></a>
         <% } %>
       </div>
