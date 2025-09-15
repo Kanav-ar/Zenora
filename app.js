@@ -5,7 +5,7 @@ if(process.env.NODE_ENV != "production"){
 const express = require("express");
 const app = express();
 const path = require("path");
-const MONGO_URL = "mongodb://127.0.0.1:27017/Zenora";
+// const MONGO_URL = "mongodb://127.0.0.1:27017/Zenora";
 const methodOverride = require('method-override');
 const ejsMate = require("ejs-mate");
 const morgan = require('morgan');
@@ -31,12 +31,12 @@ main()
   .catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect(MONGO_URL);
+  await mongoose.connect(dbUrl);
 }
 
 
 const store = MongoStore.create({
-  mongoUrl: MONGO_URL,
+  mongoUrl: dbUrl,
   crypto:{
     secret: process.env.SECRET
   },
