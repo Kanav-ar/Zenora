@@ -1,40 +1,5 @@
 <style>
-  .btn-search {
-    background-color: #fe424d;
-    color: white;
-    border-radius: 25px;
-    padding: 0 1rem 0 1rem;
-  }
-  .btn-search-mb {
-    background-color: #fe424d;
-    color: white;
-    border-radius:30px;
-    padding: 0.3rem 1rem 0.3rem 1rem ;
-    border: 0.1px;
-  }
-  .btn-search:hover {
-    background-color: #fe424d;
-    color: white;
-  }
-  .btn-search-mb:hover {
-    background-color: #fe424d;
-    color: white;
-  }
-  .btn-search i {
-    display: inline;
-    margin-right: 0.5rem;
-  }
-  .search-inp {
-    border-radius: 25px;
-    padding: 0.5rem 3rem 0.5rem 3rem;
-  }
-  .search-inp-mb {
-    width: 10rem;
-    /* border: 0.1px solid; */
-    border-radius: 25px;
-    padding: 0 0 0 0.5rem ;
-    box-shadow: 0.1px 0.1px 5px;
-  }
+  
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light sticky-top border-bottom">
@@ -59,7 +24,7 @@
 
         <!-- Search for mobile layout -->
         <%if(currUser){%>
-        <div class="navbar-nav-md d-md-none ms-3 me-auto">
+        <div class="navbar-nav-md mb-search d-md-none ms-3 me-auto">
           <form class="d-flex" action="/listings" role="search">
             <input
               class="form-control me-2 search-inp-mb"

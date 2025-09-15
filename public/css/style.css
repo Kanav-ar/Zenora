@@ -13,12 +13,13 @@ body {
   background-color: white;
   height: 5rem;
   background-color: white;
-  box-shadow: 0.5px 0.5px 15px;
+  box-shadow: 0.5px 0.5px 5px;
 }
 
 #navbarNavAltMarkup {
-  background-color: rgba(255, 255, 255, 0.877);
+  background-color: rgba(255, 255, 255, 0.918);
   transition: 0.2s;
+
 }
 
 .dropdown-menu {
@@ -33,6 +34,48 @@ body {
 .nav-link {
   color: #222222 !important;
 }
+
+.btn-search {
+    background-color: #fe424d;
+    color: white;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+  }
+  .btn-search-mb {
+    background-color: #fe424d;
+    color: white;
+    border-radius:30px;
+    padding: 0.3rem 1rem 0.3rem 1rem ;
+    border: 0.1px;
+  }
+  .btn-search:hover {
+    background-color: #fe424d;
+    color: white;
+  }
+  .btn-search-mb:hover {
+    background-color: #fe424d;
+    color: white;
+  }
+  .btn-search i {
+    display: inline;
+    margin-right: 0.5rem;
+  }
+  .search-inp {
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+  }
+  .search-inp-mb {
+    width: 11rem;
+    /* border: 0.1px solid; */
+    border-radius: 25px;
+    padding: 0 1rem 0 0.5rem;
+    box-shadow: 0.1px 0.1px 5px;
+  }
+  .mb-search{
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
 
 .f-info-links a {
   text-decoration: none;
@@ -67,10 +110,12 @@ body {
 .listing-card {
   border: none !important;
   margin-bottom: 2rem;
+  
+}
+.index-card{
   transition: 0.4s ease-in-out;
 }
-
-.listing-card:hover {
+.index-card:hover {
   transform: scale(104%);
 }
 
@@ -126,6 +171,7 @@ body {
 
 .btns {
   display: flex;
+  width: 70%
 }
 
 /* Navlinks psuedo classes */
@@ -156,7 +202,7 @@ body {
 
 /* MAP */
 #map {
-  height: 40vh;
+  height: 60vh;
   width: 110%;
 }
 
