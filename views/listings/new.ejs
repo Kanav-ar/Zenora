@@ -1,0 +1,119 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+<body>
+  <div class="row mb-5">
+    <div class="col-8 offset-2">
+      <h1 class="mb-3">Create new listing</h1>
+      <form
+        action="/listings"
+        method="post"
+        novalidate
+        class="needs-validation"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="new-title" class="form-label">Title</label>
+          <input
+            name="listing[title]"
+            class="form-control"
+            id="new-title"
+            type="text"
+            placeholder="enter title"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Title required</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="new-description" class="form-label">Description</label>
+          <textarea
+            name="listing[description]"
+            placeholder="enter description"
+            class="form-control"
+            id="new-description"
+            required
+          ></textarea>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter a short decription</div>
+        </div>
+
+        <div class="row">
+        <div class="mb-3 col-md-5">
+          <label for="new-image" class="form-label">Upload Listing image</label>
+          <input
+            name="listing[image]"
+            class="form-control"
+            id="new-image"
+            type="file"
+            placeholder="enter image URL/Link"
+            required
+          />
+          <div class="invalid-feedback">Listing Image is required</div>
+        </div>
+
+        <div class="mb-3 col-md-7">
+        <label for="Type-listing" class="form-label">Type of Listing</label>
+        
+            <select name="listing[category]" class="form-select" id="Type-listing" required>
+              <option value="" disabled selected hidden>Add Type</option>
+              <option value="room">Room</option>
+              <option value="city">City</option>
+              <option value="mountain">Mountain</option>
+              <option value="castle">Castle</option>
+              <option value="pool">Pool</option>
+              <option value="camp">Camp</option>
+              <option value="farm">Farm</option>
+              <option value="dome">Dome</option>
+              <option value="boat">Boat</option>
+            </select>
+            <div class="invalid-feedback">Please select the type of listing</div>
+          </div>
+          </div>
+          
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="new-price" class="form-label">Price</label>
+            <input
+              name="listing[price]"
+              class="form-control"
+              id="new-price"
+              type="text"
+              placeholder="enter price"
+              type="number"
+              required
+            />
+            <div class="invalid-feedback">Price should be valid</div>
+          </div>
+
+          <div class="mb-3 col-md-8">
+            <label for="new-country" class="form-label">Country</label>
+            <input
+              name="listing[country]"
+              class="form-control"
+              id="new-country"
+              type="text"
+              placeholder="enter country"
+              required
+            />
+            <div class="invalid-feedback">Country name should be valid</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input
+            name="listing[location]"
+            class="form-control"
+            id="new-location"
+            type="text"
+            placeholder="enter location"
+            required
+          />
+          <div class="invalid-feedback">Location should be valid</div>
+        </div>
+
+        <button class="btn btn-dark add-btn mt-3">Add</button>
+      </form>
+    </div>
+  </div>
+</body>
