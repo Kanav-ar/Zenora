@@ -50,7 +50,9 @@ const ListingSchema = new Schema({
     type: String,
     enum: ["room","city","mountain","castle","pool","camp","farm","arctic","boat","dome"]
   },
-  updated_at: Number,
+  
+},{
+  timestamps:true
 });
 
 ListingSchema.post("findOneAndDelete", async (listing) => {
