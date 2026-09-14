@@ -1,6 +1,6 @@
-const Listing = require("./models/listings")
+const Listing = require("./models/listings.js")
 const Review = require("./models/review.js")
-const {ListingSchema,reviewSchema} = require("./schema.js");
+const {ListingSchema,reviewSchema} = require("../schema.js");
 const ExpressError = require("./utils/expressError.js");
 
 // Checks if the user is logged in or not
